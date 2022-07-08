@@ -43,7 +43,7 @@ window.addEventListener('load', () => {
      */
     function showSlide(n) {
         n--; // decrement 1
-        for (i = 0; i < slides.length; i++) {
+        for (let i = 0; i < slides.length; i++) {
             (i == n) ? slides[n].style.display = "block" : slides[i].style.display = "none";
         }
     }

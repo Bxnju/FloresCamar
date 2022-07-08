@@ -3,7 +3,6 @@
 
    
   .slider {
-        border-radius: 5px;
         position: relative;
         width: 100%;
         background: #000;
@@ -27,19 +26,22 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
-        border-radius: 5px;
     }
 
-    .slider ul li span {
+    .slider ul li .slider__content {
         position: absolute;
         bottom: 0;
-        background: hsl(0, 1%, 72%, .1);
         left: 0;
         width: 100%;
         padding: 5px;
         text-align: center;
         color: #fff;
-        height: 70px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, .2);
+        flex-direction: column;
     }
 
     /* buttons */
@@ -98,6 +100,12 @@
         animation-name: fade;
         animation-duration: 1s;
     }
+
+    .btn__slider{
+        margin-top: 1em;
+    }
+
+
 
     @keyframes fade {
         from {

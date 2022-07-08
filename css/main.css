@@ -46,6 +46,7 @@ header .up{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	align-items: center;
 	text-align: center;
 }
 
@@ -92,3 +93,15 @@ body{
 	
 }
 
+.btn{
+	padding: 1em;
+	background: var(--eerie-black);
+	color: var(--white);
+	border: none;
+	cursor: pointer;
+	box-shadow: 0 3px 10px #090909;
+	font-family: var(--inconsolata);
+	font-weight: bold;
+	font-size: 0.9em;
+	text-decoration: none;
+}
