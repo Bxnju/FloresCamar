@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Quicksand:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=Petit+Formal+Script&family=Quicksand:wght@400;500;700&display=swap');
 
 :root{
-	--inconsolata: 'Inconsolata', monospace;
+	--oswald: 'Oswald', sans-serif;
 	--quicksand: 'Quicksand', sans-serif;
+	--petit: 'Petit Formal Script', cursive;
 	--black: #000;
 	--white: #fff;
 	--grey: #ccc;
@@ -10,6 +11,8 @@
 	--eerie-black: #1B2021;
 	--pink: #E40256;
 	--dark-pink: #C6104D;
+	--orange: #FA6F2D;
+	--dark-orange: #CF434A;
 	--dark-brown: #DFA343;
 	--brown: #F9EBBC;
 }
@@ -37,18 +40,18 @@ header{
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	font-family: var(--inconsolata);
+	font-family: var(--petit);
 	font-weight: bold;
-	z-index: 3;
-	background: var(--brown);
-	color: var(--eerie-black);
-	box-shadow: 0 5px 20px #090909,
-					inset 1em 1em 5em var(--dark-brown);
+	z-index: 5;
+	background: var(--dark-orange);
+	color: var(--white);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, .4),
+					inset .3em .3em 5em var(--orange);
 }
 
 header .up{
 	width: 100%;
-	padding: 0.5em .5em 1em .7em;
+	padding: 0.5em;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -60,7 +63,7 @@ header .up{
 header .up .logo{
 	width: 20%;
 	transition: .5s;
-/*	filter: drop-shadow(1px 1px 2px var(--gunmetal));*/
+	filter: drop-shadow(1px 1px 0 var(--white));
 }
 
 header .down{
@@ -70,6 +73,7 @@ header .down{
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	padding: .5em;
 }
 
 header .down h3{
@@ -78,6 +82,7 @@ header .down h3{
 
 header .down nav{
 	display: flex;
+	justify-content: center;
 	flex-direction: row;
 	list-style: none;
 }
@@ -93,11 +98,11 @@ header .down nav a{
 header .down nav a::before{
 	content: '';
 	position: absolute;
-	bottom: 5px;
+	bottom: 9px;
 	left: 0;
 	width: 0;
-	height: .5em;
-	background: var(--pink);
+	height: .3em;
+	background: var(--white);
 	transition: .5s;
 }
 
@@ -119,13 +124,29 @@ body{
 
 .btn{
 	padding: 1em;
-	background: var(--eerie-black);
 	color: var(--white);
 	border: none;
 	cursor: pointer;
-	box-shadow: 0 3px 10px #090909;
-	font-family: var(--inconsolata);
+	font-family: var(--petit);
 	font-weight: bold;
 	font-size: 0.9em;
 	text-decoration: none;
 }
+
+.btn__1{
+	background: var(--dark-orange);
+	box-shadow: 0 3px 10px #090909,
+					inset 0 0 2em var(--orange);
+}
+
+.btn__2{
+	color: var(--dark-orange);
+	font-weight: bold;
+	border: 3px solid var(--dark-orange);
+	border-radius: 5px;
+}
+
+.title{
+	font-family: var(--petit);
+}
+
