@@ -11,8 +11,8 @@
 	--eerie-black: #1B2021;
 	--pink: #E40256;
 	--dark-pink: #C6104D;
-	--orange: #FA6F2D;
-	--dark-orange: #CF434A;
+	--orange: #D8590B;
+	--dark-orange: #AE4200;
 	--dark-brown: #DFA343;
 	--brown: #F9EBBC;
 }
@@ -20,7 +20,8 @@
 body{
 	background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)) ,url('https://images.unsplash.com/photo-1431263154979-0982327fccbb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
 	background-size: cover;
-	background-position: 0 -300px;
+	background-repeat: no-repeat;
+	height: 100%;
 }
 
 .title{

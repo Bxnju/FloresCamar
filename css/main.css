@@ -11,8 +11,8 @@
 	--eerie-black: #1B2021;
 	--pink: #E40256;
 	--dark-pink: #C6104D;
-	--orange: #FA6F2D;
-	--dark-orange: #CF434A;
+	--orange: #D8590B;
+	--dark-orange: #AE4200;
 	--dark-brown: #DFA343;
 	--brown: #F9EBBC;
 }
@@ -29,6 +29,9 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
 }
 
 html{
@@ -43,10 +46,8 @@ header{
 	font-family: var(--petit);
 	font-weight: bold;
 	z-index: 5;
-	background: var(--dark-orange);
-	color: var(--white);
-	box-shadow: 0 5px 10px rgba(0, 0, 0, .4),
-					inset .3em .3em 5em var(--orange);
+	background: var(--white);
+	color: var(--eerie-black);
 }
 
 header .up{
@@ -55,6 +56,8 @@ header .up{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	background: var(--white);
+	color: var(--eerie-black);
 	align-items: center;
 	text-align: center;
 	flex-wrap: wrap;
@@ -102,7 +105,7 @@ header .down nav a::before{
 	left: 0;
 	width: 0;
 	height: .3em;
-	background: var(--white);
+	background: var(--pink);
 	transition: .5s;
 }
 
@@ -110,16 +113,152 @@ header .down nav a:hover::before{
 	width: 100%;
 }
 
-.active__link{
-	
-}
-
-.active__link:hover{
-	
+#navbar__divisor{
+	display: block;
+  	margin-top: 0.5em;
+  	margin-bottom: 0.5em;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 95%;
 }
 
 body{
 	
+}
+
+.footer{
+	background: var(--white);
+	font-size: 0.8em;
+	font-family: var(--quicksand);
+	padding: 2em 2em 0.8em 2em;
+}
+
+.footer__up{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+}
+
+.footer__info{
+	display: inline-block;
+	width: 30%;
+}
+
+.footer__info h2{
+	color: var(--pink);
+}
+
+.footer__info span{
+	display: block;
+	font-weight: bold;
+	margin: 0.7em 0;
+}
+
+.footer__newsletter{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 0.5em;
+	width: 30%;
+}
+
+.footer__newsletter h2{
+	color: var(--pink);
+	font-weight: bold;
+	font-size: 2em;
+}
+
+
+.footer__newsletter input[type=email]{
+	border-radius: 2em;
+	font-family: var(--quicksand);
+	border: 2px solid var(--eerie-black);
+	display: inline;
+	height: 2em;
+	width: 20em;
+	padding: 0 1em;
+	font-weight: bold;
+	color: var(--dark-pink);
+}
+
+.footer__newsletter a{
+	font-size: 0.8em;
+}
+
+.footer__redes{
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+}
+
+.footer__redes a{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3em;
+	width: 2em;
+	height: 2em;
+	padding: 0.6em;
+	border: 4px solid var(--pink);
+	border-radius: 50%;
+	transition: .3s;
+	cursor: pointer;
+}
+
+.footer__redes-whatsapp:hover{
+	background: #25D366;
+	color: var(--white);
+	border: none;
+}
+
+.footer__redes-instagram:hover{
+	background: var(--dark-pink);
+	color: var(--white);
+	border: none;
+}
+
+.footer__redes-facebook:hover{
+	background: #106DD3;
+	color: var(--white);
+	border: none;
+}
+
+.footer__down{
+	display: flex;
+	justify-content: space-between;
+	padding: 1em 7.5em 0 1.7em;
+	align-items: center;
+}
+
+.footer__derechos{
+	color: var(--gunmetal);
+}
+
+.whatsapp{
+	position: fixed;
+	float: left;
+	bottom: 1em;
+	right: 1em;
+	text-decoration: none;
+	color: var(--white);
+	padding: 0.5em;
+	font-size: 2.5em;
+	background: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background: #25D366;
+	transition: .5s;
+}
+
+.whatsapp:hover{
+	transform: scale(1.05);
+	background: #128C7E;
 }
 
 .btn{
@@ -131,22 +270,23 @@ body{
 	font-weight: bold;
 	font-size: 0.9em;
 	text-decoration: none;
+	border-radius: 2em;
 }
 
 .btn__1{
-	background: var(--dark-orange);
+	background: var(--dark-pink);
 	box-shadow: 0 3px 10px #090909,
-					inset 0 0 2em var(--orange);
+					inset 0 0 2em var(--pink);
 }
 
 .btn__2{
-	color: var(--dark-orange);
+	color: var(--dark-pink);
 	font-weight: bold;
-	border: 3px solid var(--dark-orange);
-	border-radius: 5px;
+	border: 3px solid var(--pink);
 }
 
 .title{
 	font-family: var(--petit);
 }
+
 
