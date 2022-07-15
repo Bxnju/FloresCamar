@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/catalogo.css">
+	<link rel="stylesheet" type="text/css" href="css/opciones.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 	<title>Catalogo | Flores Camar SAS</title>
 	<script type="text/javascript" src="js/main.js"></script>
@@ -31,20 +31,37 @@
 
 <body>
 
-
+<div class="flex-center flex-r my-2">
 	<?php 
 
 	include('query/conexion.php');
 
-	$sql = 'SELECT * FROM `funebres` WHERE id = 1';
+	$type = $_GET['type'];
+	$sql = 'SELECT * FROM '.$type.';';
 	$result = mysqli_query($conexion,$sql);
 
+
 	while ($mostrar=mysqli_fetch_array($result)) {
+
+		if ($mostrar['inventario'] == 0) {
+			continue;
+		}
+
 		echo '
 
-		
-		<img style="width: 50%;" src="'.$mostrar['img'].'">
 
+		<a class="product__link" href="pagar.php?type='.$type.'&id='.$mostrar['id'].'">
+		<div class="product__card">
+			<div class="product__card-header">
+				<img src="'.$mostrar['img'].'" class="product__img">		
+			</div>
+			<div class="product__card-body">
+				<h3>'.$mostrar['titulo'].'</h3>
+				<p class="product__price"> $ '.$mostrar['precioPantalla'].' COP</p>
+				<a href="pagar.php?type='.$type.'&id='.$mostrar['id'].'" class="product__card-btn">Ver mas y comprar</a>
+			</div>
+		</div>
+	</a>
 
 
 		';
@@ -52,7 +69,12 @@
 	}
 	 ?>
 
+</div>
+
+
+
 <a class="whatsapp" href="https://api.whatsapp.com/send?phone=573122723581&text=Hola,%20quiero%20realizar%20un%20pedido."><i class="fa-brands fa-whatsapp" title="Escribenos a nuestro Whatsapp!"></i></a>
+
 
 </body>
 

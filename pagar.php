@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/catalogo.css">
+	<link rel="stylesheet" type="text/css" href="css/pagar.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 	<title>Catalogo | Flores Camar SAS</title>
 	<script type="text/javascript" src="js/main.js"></script>
@@ -31,57 +31,40 @@
 
 <body>
 
-<h1 class="title">Elige entre estas 4 opciones:</h1>
+<div class="flex-center flex-r my-2">
 
-<div class="cards">
+	<?php 
 
-	<a class="card__link" href="opciones.php?type=bouquets">
-		<div class="card card__1">
-			<div class="card__header">
-				bouquet's
-			</div>
-			<div class="card__body">
-				<p>Ramos vibrantes que transmiten colores y sentimientos.</p>
-			</div>
-		</div>
-	</a>
+	include('query/conexion.php');
 
-	<a class="card__link" href="opciones.php?type=funebres">
-		<div class="card card__2">
-			<div class="card__header">
-				funebres
-			</div>
-			<div class="card__body">
-				<p>Arreglos flores para esos momentos dificiles.</p>
-			</div>
-		</div>
-	</a>
+	$type = $_GET['type'];
+	$id = $_GET['id'];
+	$sql = 'SELECT * FROM '.$type.' WHERE id = '.$id.';';
+	$result = mysqli_query($conexion,$sql);
 
-	<a class="card__link" href="opciones.php?type=tropicales">
-		<div class="card card__3">
-			<div class="card__header">
-				tropicales
-			</div>
-			<div class="card__body">
-				<p>Arreglos flores para esos momentos dificiles.</p>
-			</div>
-		</div>
-	</a>
 
-	<a class="card__link" href="opciones.php?type=cmesa">
-		<div class="card card__4">
-			<div class="card__header">
-				centros de mesa
-			</div>
-			<div class="card__body">
-				<p>Arreglos flores para esos momentos dificiles.</p>
-			</div>
-		</div>
-	</a>
+	while ($mostrar=mysqli_fetch_array($result)) {
+
+		echo '
+
+
+		
+
+
+
+		';
+
+	}
+
+
+	 ?>
 
 </div>
 
+<!-- background-image: url('.$mostrar['img'].'); -->
+
 <a class="whatsapp" href="https://api.whatsapp.com/send?phone=573122723581&text=Hola,%20quiero%20realizar%20un%20pedido."><i class="fa-brands fa-whatsapp" title="Escribenos a nuestro Whatsapp!"></i></a>
+
 
 </body>
 
