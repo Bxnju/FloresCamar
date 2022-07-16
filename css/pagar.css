@@ -18,6 +18,137 @@
 	--brown: #F9EBBC;
 }
 
-.pene{
+.f{
+	min-height: 92vh;
+	font-family: var(--quicksand);
+	box-shadow: inset 0 -1px 10px var(--gunmetal);
+}
+
+.f__img{
 	background-size: cover;
+	background-position: center;
+	height: 17vh;
+}
+
+.f__info{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	padding: 1em;
+	height: 23vh;
+}
+
+.f__info-i{
+	width: 40%;
+	text-align: center;
+}
+
+.f__info-i h2, .f__info-c h2{
+	font-family: var(--petit);
+	margin-bottom: 0.5em;
+	color: var(--pink);
+	font-weight: bold;
+}
+
+.f__info-c {
+	width: 26%;
+	padding-left: 5em;	
+}
+
+.f__info-p{
+	width: 33%;
+	text-align: center;
+	color: var(--pink);
+}
+
+.f__form{
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 50vh;
+	padding: 1em 1em;
+	background: var(--m-white);
+	user-select: all;
+}
+
+.f__form h1{
+	font-family: var(--petit);
+	color: var(--pink);
+	margin-bottom: 1em;
+	text-transform: capitalize;
+}
+
+.f__form-f{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	width: 100%;
+}
+
+.f__form-f div{
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+}
+
+.f__form-f input:not([type="submit"]){
+	margin-bottom: 1em;
+	border: none;
+	border-bottom: 1px solid var(--eerie-black);
+	padding: 1em;
+	background: transparent;
+	color: var(--eerie-black);
+	font-family: var(--quicksand);
+	text-transform: uppercase;
+}
+
+.f__form-f input::placeholder{
+	color: var(--eerie-black);
+	text-transform: capitalize;
+}
+
+.f__form-f input:focus{
+	border: none;
+	outline: none;
+	font-weight: bold;
+	border-bottom: 1px solid var(--eerie-black);
+}
+
+.f__form-f input:focus::placeholder{
+	font-weight: bold;
+}
+
+.f__form-f select{
+	margin-bottom: 1em;
+	border: 1px solid var(--eerie-black);
+	padding: 1em;
+	background: transparent;
+	color: var(--eerie-black);
+	font-family: var(--quicksand);
+}
+
+.f__form-f select option{
+	color: var(--m-white);
+	background: var(--black);
+}
+
+.f__form-f input[type="submit"]{
+	margin-bottom: 1em;
+	border: 2px solid var(--pink);
+	padding: 1em;
+	background: transparent;
+	color: var(--eerie-black);
+	font-family: var(--petit);
+	border-radius: 1em;
+	color: var(--pink);
+	cursor: pointer;
+	font-weight: bold;
+	transition: .4s;
+}
+
+.f__form-f input[type="submit"]:hover{
+	box-shadow: inset 0 1px 5px var(--pink);
 }

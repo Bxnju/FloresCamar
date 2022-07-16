@@ -31,7 +31,60 @@
 
 <body>
 
-<div class="flex-center flex-r my-2">
+<!-- <div class="f">
+	<div class="f__img"></div>
+	<div class="f__info">
+		<div class="f__info-i">
+			<h2>Croseta de Mariscos</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+		<div class="f__info-c">
+			<h2>Contenido:</h2>
+			<ul>
+				<li>Rosas</li>
+				<li>Amapolas</li>
+				<li>Girasoles</li>
+				<li>Croquetas</li>
+			</ul>
+		</div>
+		<div class="f__info-p">
+			<h1>$ 320.000 COP</h1>
+		</div>
+	</div>
+	<div class="f__form">
+		<h1>formulario de compra</h1>
+		<form action="" class="f__form-f">
+			
+			<div>
+				<input type="text" placeholder="Nombres" name="nombres">
+				<input type="text" placeholder="Apellidos" name="apellidos">
+				<input type="number" placeholder="Celular" name="celular">
+			</div>
+
+			<div>
+				<input type="email" placeholder="Email" name="email">
+				<select name="kTarjeta">
+					<option selected disabled>Selecciona el tipo de tarjeta</option>
+					<option>VISA</option>
+					<option>MASTERCARD</option>
+					<option>BBVA</option>
+					<option>BANCOLOMBIA</option>
+					<option>BANCO DE BOGOTA</option>
+				</select>
+				<input type="number" placeholder="Numero de Tarjeta" name="nTarjeta">
+			</div>
+
+			<div>
+				<input type="text" placeholder="Fecha de Vencimiento de Tarjeta" onfocus="(this.type='date')" name="fVencimiento">
+				<input type="number" min="1" placeholder="Cantidad de Productos" name="inventario">
+				<input type="submit" value="Pagar" name="pagar">
+			</div>
+
+		</form>
+	</div>
+</div> -->
+
 
 	<?php 
 
@@ -45,10 +98,86 @@
 
 	while ($mostrar=mysqli_fetch_array($result)) {
 
+
+		$titulo = $mostrar['titulo'];
+		$descripcion = $mostrar['descripcion'];
+		$caracteristica1 = $mostrar['caracteristica1'];
+		$caracteristica2 = $mostrar['caracteristica2'];
+		$caracteristica3 = $mostrar['caracteristica3'];
+		$caracteristica4 = $mostrar['caracteristica4'];
+		$precioPantalla = $mostrar['precioPantalla'];
+		$precio = $mostrar['precio'];
+		$img = $mostrar['img'];
+
+		if($caracteristica1 == NULL){
+			$caracteristica1 = "...";
+		}if($caracteristica2 == NULL){
+			$caracteristica2 = "...";
+		}if($caracteristica3 == NULL){
+			$caracteristica3 = "...";
+		}if($caracteristica4 == NULL){
+			$caracteristica4 = "...";
+		}
+
 		echo '
 
 
-		
+<div class="f">
+	<div class="f__img" style="background-image: url('.$img.');"></div>
+	<div class="f__info">
+		<div class="f__info-i">
+			<h2>'.$titulo.'</h2>
+			<p>'.$descripcion.'</p>
+		</div>
+		<div class="f__info-c">
+			<h2>Contenido:</h2>
+			<ul>
+				<li>'.$caracteristica1.'</li>
+				<li>'.$caracteristica2.'</li>
+				<li>'.$caracteristica3.'</li>
+				<li>'.$caracteristica4.'</li>
+			</ul>
+		</div>
+		<div class="f__info-p">
+			<h1>$ '.$precioPantalla.' COP</h1>
+		</div>
+	</div>
+	<div class="f__form">
+		<h1>formulario de compra</h1>
+		<form action="query/compras.php?type='.$type.'" method="POST" class="f__form-f">
+			
+			<div>
+				<input type="text" placeholder="Nombres" name="nombres">
+				<input type="text" placeholder="Apellidos" name="apellidos">
+				<input type="number" placeholder="Celular" name="celular">
+			</div>
+
+			<div>
+				<input type="email" placeholder="Email" name="correo">
+				<select name="kTarjeta">
+					<option selected disabled>Selecciona el tipo de tarjeta</option>
+					<option>VISA</option>
+					<option>MASTERCARD</option>
+					<option>BBVA</option>
+					<option>BANCOLOMBIA</option>
+					<option>BANCO DE BOGOTA</option>
+				</select>
+				<input type="number" placeholder="Numero de Tarjeta" name="nTarjeta">
+			</div>
+
+			<div>
+				<input type="text" placeholder="Fecha de Vencimiento de Tarjeta" onfocus="(this.type=&quot;date&quot;)" name="fVencimiento">
+				<input type="number" min="1" value="" placeholder="Cantidad de Productos" name="inventario">
+
+				<input type="number" style="display: none;" value="'.$id.'" name="id">
+				<input type="number" style="display: none;" value="'.$precio.'" name="precio">
+
+				<input type="submit" value="Pagar" name="pagar">
+			</div>
+
+		</form>
+	</div>
+</div>
 
 
 
@@ -59,7 +188,6 @@
 
 	 ?>
 
-</div>
 
 <!-- background-image: url('.$mostrar['img'].'); -->
 
