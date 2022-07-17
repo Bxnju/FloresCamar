@@ -107,6 +107,7 @@
 		$caracteristica4 = $mostrar['caracteristica4'];
 		$precioPantalla = $mostrar['precioPantalla'];
 		$precio = $mostrar['precio'];
+		$inventario = $mostrar['inventario'];
 		$img = $mostrar['img'];
 
 		if($caracteristica1 == NULL){
@@ -147,14 +148,14 @@
 		<form action="query/compras.php?type='.$type.'" method="POST" class="f__form-f">
 			
 			<div>
-				<input type="text" placeholder="Nombres" name="nombres">
-				<input type="text" placeholder="Apellidos" name="apellidos">
-				<input type="number" placeholder="Celular" name="celular">
+				<input type="text" placeholder="Nombres" name="nombres" required>
+				<input type="text" placeholder="Apellidos" name="apellidos" required>
+				<input type="number" placeholder="Celular" name="celular" required>
 			</div>
 
 			<div>
-				<input type="email" placeholder="Email" name="correo">
-				<select name="kTarjeta">
+				<input type="email" placeholder="Email" name="correo" required>
+				<select name="kTarjeta" required>
 					<option selected disabled>Selecciona el tipo de tarjeta</option>
 					<option>VISA</option>
 					<option>MASTERCARD</option>
@@ -162,12 +163,12 @@
 					<option>BANCOLOMBIA</option>
 					<option>BANCO DE BOGOTA</option>
 				</select>
-				<input type="number" placeholder="Numero de Tarjeta" name="nTarjeta">
+				<input type="number" placeholder="Numero de Tarjeta" name="nTarjeta" required>
 			</div>
 
 			<div>
-				<input type="text" placeholder="Fecha de Vencimiento de Tarjeta" onfocus="(this.type=&quot;date&quot;)" name="fVencimiento">
-				<input type="number" min="1" value="" placeholder="Cantidad de Productos" name="inventario">
+				<input type="text" placeholder="Fecha de Vencimiento de Tarjeta" onfocus="(this.type=&quot;date&quot;)" name="fVencimiento" required>
+				<input type="number" min="1" value="" placeholder="Cantidad de Productos (Disponibles: '.$inventario.')" name="cantidadProducto" required>
 
 				<input type="number" style="display: none;" value="'.$id.'" name="id">
 				<input type="number" style="display: none;" value="'.$precio.'" name="precio">
