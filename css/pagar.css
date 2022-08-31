@@ -18,15 +18,21 @@
 	--brown: #F9EBBC;
 }
 
+body{
+	scroll-snap-type: both mandatory;
+}
+
 .f{
 	min-height: 92vh;
 	font-family: var(--quicksand);
-	box-shadow: inset 0 -1px 10px var(--gunmetal);
+	scroll-snap-align: start;
 }
 
 .f__img{
 	background-size: cover;
 	background-position: center;
+	background-color: rgba(0, 0, 0, .3);
+	background-blend-mode: multiply;
 	height: 17vh;
 }
 
@@ -72,6 +78,7 @@
 	padding: 1em 1em;
 	background: var(--m-white);
 	user-select: all;
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, .3);
 }
 
 .f__form h1{

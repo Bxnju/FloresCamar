@@ -28,7 +28,7 @@ body{
 }
 
 .product__card{
-	height: 20em;
+	height: 22em;
 	width: 16em;
 	border-radius: 1em;
 	background: var(--m-white);
@@ -51,7 +51,7 @@ body{
 
 .product__img{
 	display: inline-block;
-	width: 13em;
+	width: 60%;
 	border-radius: 0.7em;
 }
 

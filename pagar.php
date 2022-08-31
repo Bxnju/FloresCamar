@@ -12,17 +12,16 @@
 
 <header id="navbar">
 	<div class="up">
-		<h3 class="number"><i class="fa-solid fa-phone"></i> (+57) 311-332-2312</h3>
+		<h3 class="number"><i class="fa-solid fa-phone"></i> (+57) 312 272 3581</h3>
 		<img id="logo" class="logo" alt="logo flores camar sas" src="imgs/logo-nobg.png">
-		<span class="location"><i class="fa-solid fa-location-dot"></i> Cra 83 44-3 Medellin, Colombia.</span>
+		<span class="location"><i class="fa-solid fa-location-dot"></i> Cra. 83 #n19-32, Medellin, Colombia.</span>
 	</div>
 	<hr id="navbar__divisor">
 	<div class="down">
-		<h3 class="slogan">Jugando con tus sentimientos...</h3>
+		<h3 class="slogan">Vive la magia de las flores...</h3>
 	<nav>
 		<a class="active__link" href="index.html">Inicio</a>
 		<a href="catalogo.html">Catalogo</a>
-		<a href="exclusivos.php">Exclusivos</a>
 		<a href="contactanos.html">Contactanos</a>
 		<a href="nosotros.html">Sobre nosotros</a>
 	</nav>
@@ -204,7 +203,7 @@
 			<span>Numero Celular: (+57) 3012031212</span>
 			<span>Numero Fijo: (604) 3341212</span>
 			<span>Direccion Medellin: Cra 83 #42a</span>
-			<span>Horario y atencion: Lunes-Sabado, 8:00am-8:00pm</span>
+			<span>Horario y atencion: Lunes-Sabado, 8:00am-8:00pm; Domingo, 8:00am-4:00pm</span>
 		</div>
 		<div class="footer__newsletter">
 			<h2>NEWSLETTER</h2>

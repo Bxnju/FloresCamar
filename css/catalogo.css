@@ -18,7 +18,7 @@
 }
 
 body{
-	background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)) ,url('https://images.unsplash.com/photo-1431263154979-0982327fccbb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+	background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)) ,url('../imgs/flores_blancas_catalogo.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 100%;
@@ -91,19 +91,19 @@ body{
 }
 
 .card__1{
-	background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)) ,url('https://cdn0.matrimonio.com.pe/article-real-wedding/330/3_2/1280/jpg/51416.webp');
+	background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)) ,url('../imgs/bouquet_catalogo.jpg');
 }
 
 .card__2{
-	background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)) ,url('https://zurired.es/wp-content/uploads/Screenshot_2588.jpg');
+	background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)) ,url('../imgs/funebre_catalogo.jpg');
 }
 
 .card__3{
-	background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)) ,url('https://www.xtrafondos.com/descargar.php?id=830&resolucion=2560x1600');
+	background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)) ,url('../imgs/flores_rojas.jpg');
 }
 
 .card__4{
-	background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)) ,url('https://bodasyweddings.com/wp-content/uploads/2017/06/centro-de-mesas-para-recepcion-de-bodas.jpg');
+	background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)) ,url('../imgs/exclusivos/exclusivo_001.jpeg');
 }
 
 .card__1, .card__2, .card__3, .card__4{
