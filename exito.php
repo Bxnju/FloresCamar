@@ -42,7 +42,7 @@
 			<h2>INFORMACION GENERAL</h2>
 			<span>Numero Celular: (+57) 3012031212</span>
 			<span>Numero Fijo: (604) 3341212</span>
-			<span>Direccion Medellin: Cra 83 #42a</span>
+			<span>Direccion Medellin: Cra. 83 #n19-32.</span>
 			<span>Horario y atencion: Lunes-Sabado, 8:00am-8:00pm</span>
 		</div>
 		<div class="footer__newsletter">

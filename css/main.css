@@ -136,10 +136,6 @@ header .down nav a:hover::before{
   	animation: cambiar_fondo 3s infinite;
 }
 
-body{
-	
-}
-
 .footer{
 	background: var(--white);
 	font-size: 0.8em;
@@ -289,7 +285,7 @@ body{
 
 .btn__1{
 	background: var(--dark-pink);
-	box-shadow: 0 3px 10px #090909,
+	box-shadow: 0 3px 10px rgba(0, 0, 0, .6),
 					inset 0 0 2em var(--pink);
 }
 

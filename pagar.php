@@ -149,7 +149,7 @@
 			<div>
 				<input type="text" placeholder="Nombres" name="nombres" required>
 				<input type="text" placeholder="Apellidos" name="apellidos" required>
-				<input type="number" placeholder="Celular" name="celular" required>
+				<input type="number" min="3000000000" max="4000000000" placeholder="Celular" name="celular" required>
 			</div>
 
 			<div>
@@ -202,7 +202,7 @@
 			<h2>INFORMACION GENERAL</h2>
 			<span>Numero Celular: (+57) 3012031212</span>
 			<span>Numero Fijo: (604) 3341212</span>
-			<span>Direccion Medellin: Cra 83 #42a</span>
+			<span>Direccion Medellin: Cra. 83 #n19-32.</span>
 			<span>Horario y atencion: Lunes-Sabado, 8:00am-8:00pm; Domingo, 8:00am-4:00pm</span>
 		</div>
 		<div class="footer__newsletter">
