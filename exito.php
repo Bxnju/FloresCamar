@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="img/png" href="./imgs/rosa.png">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/exito.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -30,6 +31,94 @@
 
 <body>
 
+
+
+	<!-- <div class="alerta">
+			<div class="alerta__header">
+				<h2>Hecho!</h2><i class="fa-solid fa-check"></i>
+			</div>
+			<div class="alerta__body">
+				<div class="datos">
+					<div class="nombres">
+						<i class="fa-solid fa-user"></i>
+						<h4>'.strtoupper($nombres).'</h4>
+					</div>
+					<div class="tipo">
+						<i class="fa-brands fa-pagelines"></i>
+						<h4>'.strtoupper($tipo).'</h4>
+					</div>
+					<div class="cantidad">
+						<i class="fa-solid fa-list-ol"></i>
+						<h4>'.$cantidadProducto.'</h4>
+					</div>
+					<div class="precio">
+						<i class="fa-solid fa-dollar-sign"></i>
+						<h4>'.$precioFinal.'</h4>
+					</div>
+				</div>
+				<div class="fecha">	
+					<i class="fa-solid fa-calendar-days"></i>
+					<h4>'.$fecha.'</h4>
+				</div>
+			</div>
+		</div> -->
+
+
+<?php 
+
+	date_default_timezone_set('UTC-5');
+
+	include('./query/conexion.php');
+
+	$nombres = $_GET['name'];
+	$tipo = $_GET['type'];
+	$precioFinal = $_GET['precioFinal'];
+	$cantidadProducto  = $_GET['cantidadProducto'];
+	$horaColombia = date(h) - 5;
+	$fecha = date('l jS \of F Y '.$horaColombia.':i:s A');
+
+
+	echo '
+
+
+		<div class="alerta">
+			<div class="alerta__header">
+				<h2>Hecho!</h2><i class="fa-solid fa-check"></i>
+			</div>
+			<div class="alerta__body">
+				<div class="datos">
+					<div class="left">
+						<div class="nombres">
+						<i class="fa-solid fa-user"></i>
+						<h4>NOMBRES: '.strtoupper($nombres).'</h4>
+						</div>
+						<div class="tipo">
+							<i class="fa-brands fa-pagelines"></i>
+							<h4>TIPO DE PRODUCTO: '.strtoupper($tipo).'</h4>
+						</div>
+					</div>
+					<div class="right">
+						<div class="cantidad">
+						<i class="fa-solid fa-list-ol"></i>
+						<h4>CANTIDAD: '.$cantidadProducto.'</h4>
+						</div>
+						<div class="precio">
+							<h4>PRECIO FINAL: $ '.$precioFinal.' COP</h4>
+						</div>
+					</div>
+				</div>
+				<div class="fecha">	
+					<i class="fa-solid fa-calendar-days"></i>
+					<h4>FECHA DE COMPRA: '.$fecha.'</h4>
+				</div>
+			</div>
+		</div>
+
+
+
+	';
+
+ ?>
 
 
 <a class="whatsapp" href="https://api.whatsapp.com/send?phone=573122723581&text=Hola,%20quiero%20realizar%20un%20pedido."><i class="fa-brands fa-whatsapp" title="Escribenos a nuestro Whatsapp!"></i></a>

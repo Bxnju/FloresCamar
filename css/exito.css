@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=Petit+Formal+Script&family=Quicksand:wght@400;500;700&display=swap');
+
+:root{
+	--oswald: 'Oswald', sans-serif;
+	--quicksand: 'Quicksand', sans-serif;
+	--petit: 'Petit Formal Script', cursive;
+	--black: #000;
+	--white: #fff;
+	--grey: #ccc;
+	--gunmetal: #30343F;
+	--eerie-black: #1B2021;
+	--pink: #E40256;
+	--dark-pink: #C6104D;
+	--orange: #D8590B;
+	--dark-orange: #AE4200;
+	--dark-brown: #DFA343;
+	--brown: #F9EBBC;
+}
+
+.alerta{
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #2FBD68;
+	margin: 0 auto;
+	color: var(--white);
+	margin:5em auto;
+}
+
+.alerta .alerta__header{
+	display: flex;
+	gap: 2em;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	padding: 2em 0;
+	width: 100%;
+	background: #119546;
+	color: var(--white);
+	font-family: var(--oswald);
+	font-size: 1.3em;
+}
+
+.alerta .alerta__header i{
+	padding: 1em;
+	border-radius: 50%;
+	background: #016127;
+	color: var(--white);
+}
+
+.alerta .alerta__body{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 2em 1em;
+}
+
+.alerta__body .datos{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.left, .right{
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.datos .nombres, .datos .tipo, .datos .nombres,.datos .cantidad, .datos .precio{
+	display: flex;
+	flex-direction: row;
+	font-size: 1.2em;
+	font-family: var(--quicksand);
+}
+
+.nombres h4, .tipo h4, .cantidad h4{
+	margin-left: 0.5em;
+}
+
+.datos .precio{
+	display: flex;
+	font-size: 1.5em;
+}
+
+.alerta__body .fecha{
+	display: flex;
+	justify-content: center;
+	padding: 3em 0 1em 0;
+	text-transform: uppercase;
+	align-items: center;
+}
+
+.fecha h4{
+	margin-left: .4em;
+	font-family: var(--oswald);
+}

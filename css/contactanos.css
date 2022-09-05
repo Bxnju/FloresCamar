@@ -33,7 +33,7 @@ body{
 	align-items: center;
 	color: var(--white);
 	font-family: var(--nunito);
-	width: 80vw;
+	width: 90vw;
 	transition: .5s;
 	transform: scale(0.8);
 	font-family: var(--quicksand);
@@ -47,9 +47,9 @@ body{
 	height: 100%;
 	justify-content: center;
 	padding: 9em 4em;
-	flex: 2;
 	gap: 1.4em;
 	font-size: 1.1em;
+	flex: 3;
 }
 
 

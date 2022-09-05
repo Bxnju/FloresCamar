@@ -16,3 +16,72 @@
 	--dark-brown: #DFA343;
 	--brown: #F9EBBC;
 }
+
+.nosotros{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: space-between;
+	padding: 2em 3em 4em 3em;
+	background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url('../imgs/margarita_blanca.jpg');
+}
+
+.mision{
+	display: flex;
+	align-items: center;
+	gap: 2em;
+}
+
+.vision{
+	width: 100%;
+	align-self: flex-end;
+	display: flex;
+	align-items: center;
+	gap: 2em;
+}
+
+.mision .titulo{
+	font-size: 8em;
+	color: var(--pink);
+	font-weight: bold;	
+	font-family: var(--oswald);
+	text-align: left;
+	display: inline-block;
+	float: left;
+	animation: cambiar_color 2s infinite ease;
+	text-shadow: -3px 3px 4px rgba(0, 0, 0, .3);
+}
+
+.vision .titulo{
+	font-size: 8em;
+	color: var(--pink);
+	font-weight: bold;	
+	font-family: var(--oswald);
+	text-align: right;
+	float: right;
+	animation: cambiar_color 2s infinite ease;
+	text-shadow: 3px 3px 4px rgba(0, 0, 0, .3);
+
+}
+
+.mision .content{
+	font-size: 2em;
+	font-family: var(--quicksand);
+	font-weight: bold;
+	text-align: left;
+	border-right: 4px solid var(--pink);
+	border-bottom: 4px solid var(--pink);
+	border-bottom-right-radius: 2em;
+	padding-bottom: 1em;
+}
+
+.vision .content{
+	font-size: 2em;
+	font-family: var(--quicksand);
+	font-weight: bold;
+	border-left: 4px solid var(--pink);
+	border-bottom: 4px solid var(--pink);
+	border-bottom-left-radius: 2em;
+	text-align: right;
+	padding-bottom: 1em;
+}

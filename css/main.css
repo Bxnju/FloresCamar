@@ -344,5 +344,16 @@ header .down nav a:hover::before{
 	}
 }
 
+@keyframes cambiar_color{
+	0%{
+		color: var(--pink);
+	}50%{
+		color: var(--dark-pink);
+	}100%{
+		color: var(--pink);
+	}
+}
+
+
 
 
