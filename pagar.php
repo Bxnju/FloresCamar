@@ -21,10 +21,11 @@
 	<div class="down">
 		<h3 class="slogan">Vive la magia de las flores...</h3>
 	<nav>
-		<a class="active__link" href="index.html">Inicio</a>
-		<a href="catalogo.html">Catalogo</a>
-		<a href="contactanos.html">Contactanos</a>
-		<a href="nosotros.html">Sobre nosotros</a>
+		<a class="active__link" href="index.php">Inicio</a>
+		<a href="catalogo.php">Catalogo</a>
+		<a href="contactanos.php">Contactanos</a>
+		<a href="nosotros.php">Sobre nosotros</a>
+		<a href="admin/login.php">Login <i class="fa-solid fa-right-to-bracket"></i></a>
 	</nav>
 	</div>
 </header>

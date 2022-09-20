@@ -4,74 +4,37 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="img/png" href="./imgs/rosa.png">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/opciones.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-	<title>Catalogo | Flores Camar SAS</title>
-	<script type="text/javascript" src="js/main.js"></script>
+
+	<script type="text/javascript" src="../js/main.js"></script>
+
+	<title>Inicio | Flores Camar SAS</title>
 </head>
 
 <header id="navbar">
 	<div class="up">
 		<h3 class="number"><i class="fa-solid fa-phone"></i> (+57) 312 272 3581</h3>
-		<img id="logo" class="logo" alt="logo flores camar sas" src="imgs/logo-nobg.png">
+		<img id="logo" class="logo" alt="logo flores camar sas" src="../imgs/logo-nobg.png">
 		<span class="location"><i class="fa-solid fa-location-dot"></i> Cra. 83 #n19-32, Medellin, Colombia.</span>
 	</div>
 	<hr id="navbar__divisor">
 	<div class="down">
 		<h3 class="slogan">Vive la magia de las flores...</h3>
 	<nav>
-		<a class="active__link" href="index.php">Inicio</a>
-		<a href="catalogo.php">Catalogo</a>
-		<a href="contactanos.php">Contactanos</a>
-		<a href="nosotros.php">Sobre nosotros</a>
-		<a href="admin/login.php">Login <i class="fa-solid fa-right-to-bracket"></i></a>
+		<a href="../index.php">Inicio</a>
+		<a href="../catalogo.php">Catalogo</a>
+		<a href="../contactanos.php">Contactanos</a>
+		<a href="../nosotros.php">Sobre nosotros</a>
+		<a class="active__link" href="login.php">Login <i class="fa-solid fa-right-to-bracket"></i></a>
 	</nav>
 	</div>
 </header>
 
 <body>
 
-<div class="flex-center flex-r my-2">
-	<?php 
-
-	include('query/conexion.php');
-
-	$type = $_GET['type'];
-	$sql = 'SELECT * FROM '.$type.';';
-	$result = mysqli_query($conexion,$sql);
-
-
-	while ($mostrar=mysqli_fetch_array($result)) {
-
-		if ($mostrar['inventario'] == 0) {
-			continue;
-		}
-
-		echo '
-
-
-		<a class="product__link" href="pagar.php?type='.$type.'&id='.$mostrar['id'].'">
-		<div class="product__card">
-			<div class="product__card-header">
-				<img src="'.$mostrar['img'].'" class="product__img">		
-			</div>
-			<div class="product__card-body">
-				<h3>'.$mostrar['titulo'].'</h3>
-				<p class="product__price"> $ '.$mostrar['precioPantalla'].' COP</p>
-				<a href="pagar.php?type='.$type.'&id='.$mostrar['id'].'" class="product__card-btn">Ver mas y comprar</a>
-			</div>
-		</div>
-	</a>
-
-
-		';
-
-	}
-	 ?>
-
-</div>
-
+	
 
 
 <a class="whatsapp" href="https://api.whatsapp.com/send?phone=573122723581&text=Hola,%20quiero%20realizar%20un%20pedido."><i class="fa-brands fa-whatsapp" title="Escribenos a nuestro Whatsapp!"></i></a>
@@ -86,7 +49,7 @@
 			<span>Numero Celular: (+57) 3012031212</span>
 			<span>Numero Fijo: (604) 3341212</span>
 			<span>Direccion Medellin: Cra. 83 #n19-32.</span>
-			<span>Horario y atencion: Lunes-Sabado, 8:00am-8:00pm</span>
+			<span>Horario y atencion: Lunes-Sabado, 8:00am-8:00pm; Domingo, 8:00am-4:00pm</span>
 		</div>
 		<div class="footer__newsletter">
 			<h2>NEWSLETTER</h2>

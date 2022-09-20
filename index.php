@@ -5,10 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="img/png" href="./imgs/rosa.png">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/exito.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-	<title>Exclusivos | Flores Camar SAS</title>
+
+	<script type="text/javascript" src="js/slider.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+
+	<title>Inicio | Flores Camar SAS</title>
 </head>
 
 <header id="navbar">
@@ -32,96 +36,39 @@
 
 <body>
 
-
-
-	<!-- <div class="alerta">
-			<div class="alerta__header">
-				<h2>Hecho!</h2><i class="fa-solid fa-check"></i>
-			</div>
-			<div class="alerta__body">
-				<div class="datos">
-					<div class="nombres">
-						<i class="fa-solid fa-user"></i>
-						<h4>'.strtoupper($nombres).'</h4>
-					</div>
-					<div class="tipo">
-						<i class="fa-brands fa-pagelines"></i>
-						<h4>'.strtoupper($tipo).'</h4>
-					</div>
-					<div class="cantidad">
-						<i class="fa-solid fa-list-ol"></i>
-						<h4>'.$cantidadProducto.'</h4>
-					</div>
-					<div class="precio">
-						<i class="fa-solid fa-dollar-sign"></i>
-						<h4>'.$precioFinal.'</h4>
-					</div>
-				</div>
-				<div class="fecha">	
-					<i class="fa-solid fa-calendar-days"></i>
-					<h4>'.$fecha.'</h4>
-				</div>
-			</div>
-		</div> -->
-
-
-<?php 
-
-	date_default_timezone_set('UTC-5');
-
-	include('./query/conexion.php');
-
-	$nombres = $_GET['name'];
-	$tipo = $_GET['type'];
-	$precioFinal = $_GET['precioFinal'];
-	$cantidadProducto  = $_GET['cantidadProducto'];
-	$fecha = date('l jS \of F Y');
-
-
-	echo '
-
-
-		<div class="alerta">
-			<div class="alerta__header">
-				<h2>Hecho!</h2><i class="fa-solid fa-check"></i>
-			</div>
-			<div class="alerta__body">
-				<div class="datos">
-					<div class="left">
-						<div class="nombres">
-						<i class="fa-solid fa-user"></i>
-						<h4>NOMBRES: '.strtoupper($nombres).'</h4>
-						</div>
-						<div class="tipo">
-							<i class="fa-brands fa-pagelines"></i>
-							<h4>TIPO DE PRODUCTO: '.strtoupper($tipo).'</h4>
-						</div>
-					</div>
-					<div class="right">
-						<div class="cantidad">
-						<i class="fa-solid fa-list-ol"></i>
-						<h4>CANTIDAD: '.$cantidadProducto.'</h4>
-						</div>
-						<div class="precio">
-							<h4>PRECIO FINAL: $ '.$precioFinal.' COP</h4>
-						</div>
-					</div>
-				</div>
-				<div class="fecha">	
-					<i class="fa-solid fa-calendar-days"></i>
-					<h4>FECHA DE COMPRA: '.$fecha.'</h4>
-				</div>
-			</div>
-		</div>
-
-
-
-	';
-
- ?>
+	<div class="slider">
+	    <ul class="slides">
+	        <li>
+	        	<img src="./imgs/flores_blancas.jpg" loading="lazy" alt="imagen1" />
+	        	<div class="slider__content">
+	        		<h2>Vive momentos felices a nuesto lado...</h2>
+	        		<a href="catalogo.html" class="btn btn__1 btn__slider">Visitar catalogo</a>
+	        	</div>
+	        </li>
+	        <li>
+	        	<img src="./imgs/flores_rojas.jpg" loading="lazy" alt="imagen2" />
+	        	<div class="slider__content">
+	        		<h2>¿Tienes un pedido con caracteristicas especiales?</h2>
+	        		<a href="contactanos.html" class="btn btn__1 btn__slider">¡Contactanos!</a>
+	        	</div>
+	        </li>
+	        <li>
+	        	<img src="./imgs/flores_rosadas.jpg" loading="lazy" alt="imagen3" />
+	        	<div class="slider__content">
+	        		<h2>¿Conoces nuestros objetivos?</h2>
+	        		<a href="nosotros.html" class="btn btn__1 btn__slider">¡Leer más!</a>
+	        	</div>
+	        </li>
+	    </ul>
+	    <div class="buttons">
+	        <div class="next"><i class="fa-solid fa-angle-right"></i></div>
+	        <div class="prev"><i class="fa-solid fa-angle-left"></i></div>
+	    </div>
+	</div>
 
 
 <a class="whatsapp" href="https://api.whatsapp.com/send?phone=573122723581&text=Hola,%20quiero%20realizar%20un%20pedido."><i class="fa-brands fa-whatsapp" title="Escribenos a nuestro Whatsapp!"></i></a>
+
 
 </body>
 
@@ -132,7 +79,7 @@
 			<span>Numero Celular: (+57) 3012031212</span>
 			<span>Numero Fijo: (604) 3341212</span>
 			<span>Direccion Medellin: Cra. 83 #n19-32.</span>
-			<span>Horario y atencion: Lunes-Sabado, 8:00am-8:00pm</span>
+			<span>Horario y atencion: Lunes-Sabado, 8:00am-8:00pm; Domingo, 8:00am-4:00pm</span>
 		</div>
 		<div class="footer__newsletter">
 			<h2>NEWSLETTER</h2>

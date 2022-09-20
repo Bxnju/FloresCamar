@@ -5,14 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="img/png" href="./imgs/rosa.png">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<link rel="stylesheet" type="text/css" href="css/slider.css">
+	<link rel="stylesheet" type="text/css" href="css/catalogo.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-	<script type="text/javascript" src="js/slider.js"></script>
+	<title>Catalogo | Flores Camar SAS</title>
 	<script type="text/javascript" src="js/main.js"></script>
-
-	<title>Inicio | Flores Camar SAS</title>
 </head>
 
 <header id="navbar">
@@ -25,49 +21,68 @@
 	<div class="down">
 		<h3 class="slogan">Vive la magia de las flores...</h3>
 	<nav>
-		<a class="active__link" href="index.html">Inicio</a>
-		<a href="catalogo.html">Catalogo</a>
-		<a href="contactanos.html">Contactanos</a>
-		<a href="nosotros.html">Sobre nosotros</a>
+		<a class="active__link" href="index.php">Inicio</a>
+		<a href="catalogo.php">Catalogo</a>
+		<a href="contactanos.php">Contactanos</a>
+		<a href="nosotros.php">Sobre nosotros</a>
+		<a class="active__link" href="admin/login.php">Login <i class="fa-solid fa-right-to-bracket"></i></a>
 	</nav>
 	</div>
 </header>
 
 <body>
 
-	<div class="slider">
-	    <ul class="slides">
-	        <li>
-	        	<img src="./imgs/flores_blancas.jpg" loading="lazy" alt="imagen1" />
-	        	<div class="slider__content">
-	        		<h2>Vive momentos felices a nuesto lado...</h2>
-	        		<a href="catalogo.html" class="btn btn__1 btn__slider">Visitar catalogo</a>
-	        	</div>
-	        </li>
-	        <li>
-	        	<img src="./imgs/flores_rojas.jpg" loading="lazy" alt="imagen2" />
-	        	<div class="slider__content">
-	        		<h2>¿Tienes un pedido con caracteristicas especiales?</h2>
-	        		<a href="contactanos.html" class="btn btn__1 btn__slider">¡Contactanos!</a>
-	        	</div>
-	        </li>
-	        <li>
-	        	<img src="./imgs/flores_rosadas.jpg" loading="lazy" alt="imagen3" />
-	        	<div class="slider__content">
-	        		<h2>¿Conoces nuestros objetivos?</h2>
-	        		<a href="nosotros.html" class="btn btn__1 btn__slider">¡Leer más!</a>
-	        	</div>
-	        </li>
-	    </ul>
-	    <div class="buttons">
-	        <div class="next"><i class="fa-solid fa-angle-right"></i></div>
-	        <div class="prev"><i class="fa-solid fa-angle-left"></i></div>
-	    </div>
-	</div>
+<h1 class="title">Elige entre estas 4 opciones:</h1>
 
+<div class="cards">
+
+	<a class="card__link" href="opciones.php?type=bouquets">
+		<div class="card card__1">
+			<div class="card__header">
+				bouquet's
+			</div>
+			<div class="card__body">
+				<p>Ramos vibrantes que transmiten colores y sentimientos.</p>
+			</div>
+		</div>
+	</a>
+
+	<a class="card__link" href="opciones.php?type=funebres">
+		<div class="card card__2">
+			<div class="card__header">
+				funebres
+			</div>
+			<div class="card__body">
+				<p>Arreglos florales para esos momentos dificiles.</p>
+			</div>
+		</div>
+	</a>
+
+	<a class="card__link" href="opciones.php?type=tropicales">
+		<div class="card card__3">
+			<div class="card__header">
+				tropicales
+			</div>
+			<div class="card__body">
+				<p>Colores vividos llenos de alegria y espiritu.</p>
+			</div>
+		</div>
+	</a>
+
+	<a class="card__link" href="opciones.php?type=exclusivos">
+		<div class="card card__4">
+			<div class="card__header">
+				Exclusivos
+			</div>
+			<div class="card__body">
+				<p>Los arreglos florales mas vendidos y exclusivos.</p>
+			</div>
+		</div>
+	</a>
+
+</div>
 
 <a class="whatsapp" href="https://api.whatsapp.com/send?phone=573122723581&text=Hola,%20quiero%20realizar%20un%20pedido."><i class="fa-brands fa-whatsapp" title="Escribenos a nuestro Whatsapp!"></i></a>
-
 
 </body>
 

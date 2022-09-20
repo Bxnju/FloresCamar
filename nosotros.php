@@ -5,9 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="img/png" href="./imgs/rosa.png">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/catalogo.css">
+	<link rel="stylesheet" type="text/css" href="css/nosotros.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-	<title>Catalogo | Flores Camar SAS</title>
+	<title>Sobre nosotros | Flores Camar SAS</title>
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 
@@ -21,65 +21,47 @@
 	<div class="down">
 		<h3 class="slogan">Vive la magia de las flores...</h3>
 	<nav>
-		<a class="active__link" href="index.html">Inicio</a>
-		<a href="catalogo.html">Catalogo</a>
-		<a href="contactanos.html">Contactanos</a>
-		<a href="nosotros.html">Sobre nosotros</a>
+		<a class="active__link" href="index.php">Inicio</a>
+		<a href="catalogo.php">Catalogo</a>
+		<a href="contactanos.php">Contactanos</a>
+		<a href="nosotros.php">Sobre nosotros</a>
+		<a href="admin/login.php">Login <i class="fa-solid fa-right-to-bracket"></i></a>
 	</nav>
 	</div>
 </header>
 
 <body>
 
-<h1 class="title">Elige entre estas 4 opciones:</h1>
 
-<div class="cards">
-
-	<a class="card__link" href="opciones.php?type=bouquets">
-		<div class="card card__1">
-			<div class="card__header">
-				bouquet's
-			</div>
-			<div class="card__body">
-				<p>Ramos vibrantes que transmiten colores y sentimientos.</p>
-			</div>
+<div class="nosotros">
+	<div class="mision">
+		<div class="titulo">
+			Misión
 		</div>
-	</a>
-
-	<a class="card__link" href="opciones.php?type=funebres">
-		<div class="card card__2">
-			<div class="card__header">
-				funebres
-			</div>
-			<div class="card__body">
-				<p>Arreglos florales para esos momentos dificiles.</p>
-			</div>
+		<div class="content">
+			Nuestra misión consiste en satisfacer la
+			necesidades de nuestros clientes
+			en el ámbito regional, brindando calidad en la
+			producción y exportación de Flores.
 		</div>
-	</a>
-
-	<a class="card__link" href="opciones.php?type=tropicales">
-		<div class="card card__3">
-			<div class="card__header">
-				tropicales
-			</div>
-			<div class="card__body">
-				<p>Colores vividos llenos de alegria y espiritu.</p>
-			</div>
+	</div>
+	<div class="vision">	
+		<div class="content">	
+		La empresa Flores camar sas se proyecta como una
+		empresa floricultora con las mas alta calidad en semillado,
+		venta e importación a nivel nacional.
 		</div>
-	</a>
-
-	<a class="card__link" href="opciones.php?type=exclusivos">
-		<div class="card card__4">
-			<div class="card__header">
-				Exclusivos
-			</div>
-			<div class="card__body">
-				<p>Los arreglos florales mas vendidos y exclusivos.</p>
-			</div>
+		<div class="titulo">
+			Visión
 		</div>
-	</a>
-
+	</div>
 </div>
+
+
+
+
+
+
 
 <a class="whatsapp" href="https://api.whatsapp.com/send?phone=573122723581&text=Hola,%20quiero%20realizar%20un%20pedido."><i class="fa-brands fa-whatsapp" title="Escribenos a nuestro Whatsapp!"></i></a>
 
@@ -92,7 +74,7 @@
 			<span>Numero Celular: (+57) 3012031212</span>
 			<span>Numero Fijo: (604) 3341212</span>
 			<span>Direccion Medellin: Cra. 83 #n19-32.</span>
-			<span>Horario y atencion: Lunes-Sabado, 8:00am-8:00pm; Domingo, 8:00am-4:00pm</span>
+			<span>Horario y atencion: Lunes-Sabado, 8:00am-8:00pm</span>
 		</div>
 		<div class="footer__newsletter">
 			<h2>NEWSLETTER</h2>
