@@ -38,6 +38,20 @@ html{
 	scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+html::-webkit-scrollbar:vertical {
+    width: 8px;
+    background: var(--white);
+
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--pink);
+}
+
 header{
 	display: flex;
 	flex-direction: column;
@@ -62,6 +76,12 @@ header .up{
 	align-items: center;
 	text-align: center;
 	flex-wrap: wrap;
+}
+
+header .up h3 span{
+	font-family: var(--quicksand);
+	font-size: 1.1em;
+	text-transform: uppercase;
 }
 
 header .up .logo{

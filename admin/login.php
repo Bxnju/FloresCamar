@@ -1,9 +1,18 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION['id_admin'])){
+   header("location:./ingresado.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="img/png" href="./imgs/rosa.png">
+	<link rel="icon" type="img/png" href="../imgs/rosa.png">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../css/login.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -34,7 +43,16 @@
 
 <body>
 
-	
+	<div class="contenedor_login">
+		<div class="form_login">
+			<h2>Login Administrador</h2>
+			<form method="POST" action="../query/validar_login.php" class="formulario">
+				<input type="text" class="input_form" placeholder="Nombre de Usuario" name="user" required>
+				<input type="password" class="input_form" placeholder="Contraseña" name="pass" required>
+				<input type="submit" class="btn__1 btn" name="login">
+			</form>
+		</div>
+	</div>
 
 
 <a class="whatsapp" href="https://api.whatsapp.com/send?phone=573122723581&text=Hola,%20quiero%20realizar%20un%20pedido."><i class="fa-brands fa-whatsapp" title="Escribenos a nuestro Whatsapp!"></i></a>
