@@ -17,7 +17,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="img/png" href="../imgs/rosa.png">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<link rel="stylesheet" type="text/css" href="../css/ingresado.css">
+	<link rel="stylesheet" type="text/css" href="../css/catalogo.css">
+	<link rel="stylesheet" type="text/css" href="../css/elegir_producto_admin.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 	<script type="text/javascript" src="../js/main.js"></script>
@@ -45,7 +46,53 @@
 
 <body>
 
-	
+<div class="cards">
+
+	<a class="card__link" href="./bouquets.php">
+		<div class="card card__1">
+			<div class="card__header">
+				bouquet's
+			</div>
+			<div class="card__body">
+				<p>Ramos vibrantes que transmiten colores y sentimientos.</p>
+			</div>
+		</div>
+	</a>
+
+	<a class="card__link" href="./funebres.php">
+		<div class="card card__2">
+			<div class="card__header">
+				funebres
+			</div>
+			<div class="card__body">
+				<p>Arreglos florales para esos momentos dificiles.</p>
+			</div>
+		</div>
+	</a>
+
+	<a class="card__link" href="./tropicales.php">
+		<div class="card card__3">
+			<div class="card__header">
+				tropicales
+			</div>
+			<div class="card__body">
+				<p>Colores vividos llenos de alegria y espiritu.</p>
+			</div>
+		</div>
+	</a>
+
+	<a class="card__link" href="./exclusivos.php">
+		<div class="card card__4">
+			<div class="card__header">
+				Exclusivos
+			</div>
+			<div class="card__body">
+				<p>Los arreglos florales mas vendidos y exclusivos.</p>
+			</div>
+		</div>
+	</a>
+
+</div>
 
 </body>
 

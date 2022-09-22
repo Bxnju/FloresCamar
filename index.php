@@ -42,21 +42,21 @@
 	        	<img src="./imgs/flores_blancas.jpg" loading="lazy" alt="imagen1" />
 	        	<div class="slider__content">
 	        		<h2>Vive momentos felices a nuesto lado...</h2>
-	        		<a href="catalogo.html" class="btn btn__1 btn__slider">Visitar catalogo</a>
+	        		<a href="catalogo.php" class="btn btn__1 btn__slider">Visitar catalogo</a>
 	        	</div>
 	        </li>
 	        <li>
 	        	<img src="./imgs/flores_rojas.jpg" loading="lazy" alt="imagen2" />
 	        	<div class="slider__content">
 	        		<h2>¿Tienes un pedido con caracteristicas especiales?</h2>
-	        		<a href="contactanos.html" class="btn btn__1 btn__slider">¡Contactanos!</a>
+	        		<a href="contactanos.php" class="btn btn__1 btn__slider">¡Contactanos!</a>
 	        	</div>
 	        </li>
 	        <li>
 	        	<img src="./imgs/flores_rosadas.jpg" loading="lazy" alt="imagen3" />
 	        	<div class="slider__content">
 	        		<h2>¿Conoces nuestros objetivos?</h2>
-	        		<a href="nosotros.html" class="btn btn__1 btn__slider">¡Leer más!</a>
+	        		<a href="nosotros.php" class="btn btn__1 btn__slider">¡Leer más!</a>
 	        	</div>
 	        </li>
 	    </ul>

@@ -17,7 +17,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="img/png" href="../imgs/rosa.png">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<link rel="stylesheet" type="text/css" href="../css/ingresado.css">
+	<link rel="stylesheet" type="text/css" href="../css/tabla.css">
+	<link rel="stylesheet" type="text/css" href="../css/tablas_productos.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 	<script type="text/javascript" src="../js/main.js"></script>
@@ -45,7 +46,51 @@
 
 <body>
 
-	
+	<div class="contenedor_tabla">
+		
+		<table class="styled-table">
+	 	<thead>
+            <tr>
+                <th>Id Producto</th>
+            	<th>Titulo</th>
+            	<th>Precio</th>
+            	<th>Cantidad Disponible</th>
+            	<th>Acciones</th>
+            </tr>
+        </thead>
+       	<tbody>
+
+        <?php 
+
+        	include("../query/conexion.php");
+
+			$sql="SELECT * from exclusivos ORDER BY id ASC";
+			$result=mysqli_query($conexion,$sql);
+	    
+			while($mostrar=mysqli_fetch_array($result)){
+
+		 ?>
+                
+                    <tr>
+                    	<td><?php echo $mostrar['id'] ?></td>
+                        <td><?php echo $mostrar['titulo'] ?></td>
+                        <td><?php echo $mostrar['precioPantalla'] ?></td>
+                        <td><?php echo $mostrar['inventario'] ?></td>
+                        <td> <a href="editar-usuario.php?id=<?php echo $mostrar['idUsuario']; ?>" title="Editar"><i
+                                    class="fas fa-user-edit"></i></a>
+                            <a title="Eliminar"
+                                href="eliminar-usuario.php?id=<?php echo $mostrar['idUsuario']; ?>"><i
+                                    class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                
+        <?php 
+			}
+	 	?>
+	 	</tbody>
+    </table>
+
+	</div>
 
 </body>
 

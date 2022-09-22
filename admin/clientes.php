@@ -17,7 +17,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="img/png" href="../imgs/rosa.png">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<link rel="stylesheet" type="text/css" href="../css/ingresado.css">
+	<link rel="stylesheet" type="text/css" href="../css/tabla.css">
+	<link rel="stylesheet" type="text/css" href="../css/clientes.css">
+	<script src="https://cdn.tailwindcss.com"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 	<script type="text/javascript" src="../js/main.js"></script>
@@ -45,7 +47,53 @@
 
 <body>
 
-	
+	<div class="contenedor_tabla">
+		
+		<table class="styled-table">
+	 	<thead>
+            <tr>
+                <th>Id Cliente</th>
+            	<th>Nombres</th>
+            	<th>Apellidos</th>
+            	<th>Celular</th>
+            	<th>Correo</th>
+            	<th>Acciones</th>
+            </tr>
+        </thead>
+       	<tbody>
+
+        <?php 
+
+        	include("../query/conexion.php");
+
+			$sql="SELECT * from clientes ORDER BY idCliente ASC";
+			$result=mysqli_query($conexion,$sql);
+	    
+			while($mostrar=mysqli_fetch_array($result)){
+
+		 ?>
+                
+                    <tr>
+                    	<td><?php echo $mostrar['idCliente'] ?></td>
+                        <td><?php echo $mostrar['nombres'] ?></td>
+                        <td><?php echo $mostrar['apellidos'] ?></td>
+                        <td><?php echo $mostrar['celular'] ?></td>
+                        <td><?php echo $mostrar['correo'] ?></td>
+                        <td> <a href="editar-usuario.php?id=<?php echo $mostrar['idUsuario']; ?>" title="Editar"><i
+                                    class="fas fa-user-edit"></i></a>
+                            <a title="Eliminar"
+                                href="eliminar-usuario.php?id=<?php echo $mostrar['idUsuario']; ?>"><i
+                                    class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                
+        <?php 
+			}
+	 	?>
+	 	</tbody>
+    </table>
+
+	</div>
 
 </body>
 
