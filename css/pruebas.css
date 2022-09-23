@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=Petit+Formal+Script&family=Quicksand:wght@400;500;700&display=swap');
+
+:root{
+	--oswald: 'Oswald', sans-serif;
+	--quicksand: 'Quicksand', sans-serif;
+	--petit: 'Petit Formal Script', cursive;
+	--black: #000;
+	--white: #fff;
+	--grey: #ccc;
+	--gunmetal: #30343F;
+	--eerie-black: #1B2021;
+	--pink: #E40256;
+	--dark-pink: #C6104D;
+	--orange: #D8590B;
+	--dark-orange: #AE4200;
+	--dark-brown: #DFA343;
+	--brown: #F9EBBC;
+}
+
+.contenedor_formulario{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 3em 0;
+	background: linear-gradient(rgba(204, 49, 242, .5), rgba(159, 4, 198, 0.5)), url("../imgs/flores_rojas.jpg");
+	background-size: cover;
+	border-top-left-radius: 0.7em;
+	border-bottom-left-radius: 0.7em;
+}
+
+.formulario{
+	width: 50%;
+	background: red;
+	border-top-right-radius: 0.7em;
+	border-bottom-right-radius: 0.7em;
+	padding: 2em 2em 2em 2em;
+	background: var(--white);
+}
+
+.formulario h1{
+	font-family: var(--petit);
+	color: var(--pink);
+	text-align: center;
+}
+
+.formulario form{
+	margin-top: 3em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+
+form label{
+	font-family: var(--quicksand);
+	font-weight: bold;
+	color: var(--pink);
+	margin-top: 1em;
+}
+
+form input:not([type="submit"]){
+	border: none;
+	border-bottom: 2px solid rgba(0, 0, 0, .5);
+	padding: 0.4em 0.4em 0.4em 1em;
+	width: 100%;
+	margin-top: 0.3em;
+	color: rgba(0, 0, 0, .5);
+	font-weight: bold;
+	font-size: 0.9em;
+	font-family: var(--quicksand);
+	transition: .2s;
+}
+
+form input:not([type="submit"]):focus{
+	border: none;
+	border-bottom: 2px solid rgba(0, 0, 0, .5);
+	outline: none;
+	color: var(--gunmetal);
+}
+
+form input:last-of-type{
+	margin-top: 2em;
+	align-self: center;
+	width: 40%;
+}
+
+form small{
+	font-family: var(--quicksand);
+	color: rgba(0, 0, 0, .5);
+}

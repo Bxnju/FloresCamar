@@ -38,6 +38,7 @@
 		<h3 class="slogan">Vive la magia de las flores...</h3>
 	<nav>
 		<a href="./ingresado.php">Inicio</a>
+		<a href="./pedidos.php">Pedidos</a>
 		<a href="./productos.php">Productos</a>
 		<a href="./clientes.php">Clientes</a>
 		<a class="active__link" href="../query/logout.php">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
@@ -79,11 +80,9 @@
                         <td><?php echo $mostrar['apellidos'] ?></td>
                         <td><?php echo $mostrar['celular'] ?></td>
                         <td><?php echo $mostrar['correo'] ?></td>
-                        <td> <a href="editar-usuario.php?id=<?php echo $mostrar['idUsuario']; ?>" title="Editar"><i
-                                    class="fas fa-user-edit"></i></a>
-                            <a title="Eliminar"
-                                href="eliminar-usuario.php?id=<?php echo $mostrar['idUsuario']; ?>"><i
-                                    class="fas fa-trash-alt"></i></a>
+                        <td> <a href="formulario_actualizar_cliente.php?idCliente=<?php echo $mostrar['idCliente']; ?>" title="Editar"><i class="fas fa-user-edit"></i></a>
+                            <a title="Eliminar" onclick="eliminarCliente(<?php echo $mostrar['idCliente'] ?>)">
+                            	<i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                 

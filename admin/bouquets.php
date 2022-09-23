@@ -37,6 +37,7 @@
 		<h3 class="slogan">Vive la magia de las flores...</h3>
 	<nav>
 		<a href="./ingresado.php">Inicio</a>
+		<a href="./pedidos.php">Pedidos</a>
 		<a href="./productos.php">Productos</a>
 		<a href="./clientes.php">Clientes</a>
 		<a class="active__link" href="../query/logout.php">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
@@ -66,6 +67,8 @@
 
 			$sql="SELECT * from bouquets ORDER BY id ASC";
 			$result=mysqli_query($conexion,$sql);
+
+			$tipo = "bouquets";
 	    
 			while($mostrar=mysqli_fetch_array($result)){
 
@@ -76,10 +79,8 @@
                         <td><?php echo $mostrar['titulo'] ?></td>
                         <td><?php echo $mostrar['precioPantalla'] ?></td>
                         <td><?php echo $mostrar['inventario'] ?></td>
-                        <td> <a href="editar-usuario.php?id=<?php echo $mostrar['idUsuario']; ?>" title="Editar"><i
-                                    class="fas fa-user-edit"></i></a>
-                            <a title="Eliminar"
-                                href="eliminar-usuario.php?id=<?php echo $mostrar['idUsuario']; ?>"><i
+                        <td> <a href="formulario_actualizar_producto.php?id=<?php echo $mostrar['id']; ?>&tipo=bouquets" title="Editar"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a title="Eliminar" onClick="eliminarBouquet(<?php echo $mostrar['id'] ?>)"><i
                                     class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>

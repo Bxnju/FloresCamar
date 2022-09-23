@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="img/png" href="./imgs/rosa.png">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/pruebas.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 	<script type="text/javascript" src="../js/main.js"></script>
@@ -34,20 +34,23 @@
 
 <body>
 
-	<div class="contenedor_login">
-		<div class="form_login">
-			<h2>Login Administrador</h2>
-			<form method="POST" action="../query/validar_login.php" class="formulario">
-				<input type="text" class="input_form" placeholder="Nombre de Usuario" name="user" required>
-				<input type="password" class="input_form" placeholder="Contraseña" name="pass" required>
-				<input type="submit" class="btn__1 btn" name="login">
+	<div class="contenedor_formulario">
+		<div class="formulario">
+			<h1>Actualizar Datos:</h1>
+			<form method="POST" action="../query/actualizar_datos_cliente.php">
+				<label for="nombres">Nombres:</label>
+				<input type="text" value="<?php $mostrar['nombres'] ?>" name="nombres">
+				<label for="apellidos">Apellidos:</label>
+				<input type="text" value="<?php $mostrar['apellidos'] ?>" name="apellidos">
+				<label for="celular">Celular:</label>
+				<input type="number" value="<?php $mostrar['celular'] ?>" name="celular">
+				<label for="correo">Correo:</label>
+				<input type="email" value="<?php $mostrar['correo'] ?>" name="correo">
+				<small>Nota: Los datos que no quieras modificar dejalos como estan y presiona actualizar.</small>
+				<input type="submit" value="Actualizar" class="btn btn__2" name="actualizar_datos">
 			</form>
 		</div>
 	</div>
-
-
-<a class="whatsapp" href="https://api.whatsapp.com/send?phone=573122723581&text=Hola,%20quiero%20realizar%20un%20pedido."><i class="fa-brands fa-whatsapp" title="Escribenos a nuestro Whatsapp!"></i></a>
-
 
 </body>
 

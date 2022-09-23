@@ -36,6 +36,7 @@
 		<h3 class="slogan">Vive la magia de las flores...</h3>
 	<nav>
 		<a href="./ingresado.php">Inicio</a>
+		<a href="./pedidos.php">Pedidos</a>
 		<a href="./productos.php">Productos</a>
 		<a href="./clientes.php">Clientes</a>
 		<a class="active__link" href="../query/logout.php">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
@@ -45,7 +46,9 @@
 
 <body>
 
-	
+	<div class="imagen_admin">
+		<div class="d"></div>
+	</div>
 
 </body>
 

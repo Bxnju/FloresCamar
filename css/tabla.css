@@ -67,4 +67,5 @@
 
 .styled-table tbody tr td a:nth-of-type(2){
 	background: #D70000;
+	cursor: pointer;
 }  

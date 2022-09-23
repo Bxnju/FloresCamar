@@ -19,3 +19,37 @@
 	}
 
 	window.addEventListener("scroll", navbar);
+
+	function eliminarCliente(idCliente){
+		if (window.confirm("Quiere eliminar al usuario seleccionado?")) {
+  			window.location = ("../query/eliminar_cliente.php?idCliente=" + idCliente);
+		}
+	}
+
+	function eliminarBouquet(idProducto){
+
+		if (window.confirm("Quiere eliminar al producto seleccionado?")) {
+  			window.location = ("../query/eliminar_producto.php?id=" + idProducto + "&tipo=bouquets");
+		}
+	}
+
+	function eliminarFunebre(idProducto){
+
+		if (window.confirm("Quiere eliminar al producto seleccionado?")) {
+  			window.location = ("../query/eliminar_producto.php?id=" + idProducto + "&tipo=funebres");
+		}
+	}
+
+	function eliminarTropical(idProducto){
+
+		if (window.confirm("Quiere eliminar al producto seleccionado?")) {
+  			window.location = ("../query/eliminar_producto.php?id=" + idProducto + "&tipo=tropicales");
+		}
+	}
+
+	function eliminarExclusivo(idProducto){
+
+		if (window.confirm("Quiere eliminar al producto seleccionado?")) {
+  			window.location = ("../query/eliminar_producto.php?id=" + idProducto + "&tipo=exclusivos");
+		}
+	}
