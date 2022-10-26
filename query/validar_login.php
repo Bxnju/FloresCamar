@@ -11,7 +11,6 @@ if(isset($_POST["login"])){
     $user= mysqli_real_escape_string($conexion,$_POST['user']);
     $pass= mysqli_real_escape_string($conexion,$_POST['pass']);
     $hash= SHA1($pass);
-    $resultadohash = $conexion->query($hash);
     $sqlAdmin = "SELECT * FROM admin 
     WHERE user = '$user' AND pass = '$hash'";
     $resultadoAdmin = $conexion->query($sqlAdmin);

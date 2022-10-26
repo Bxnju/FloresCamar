@@ -67,7 +67,7 @@
 
 <?php 
 
-	date_default_timezone_set('UTC-5');
+	date_default_timezone_set('UTC');
 
 	include('./query/conexion.php');
 

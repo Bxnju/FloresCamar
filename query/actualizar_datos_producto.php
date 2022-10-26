@@ -10,7 +10,7 @@
     $precio= mysqli_real_escape_string($conexion,$_POST['precio']);
     $inventario= mysqli_real_escape_string($conexion,$_POST['inventario']);
 
-   $actDatos = "UPDATE `$tipo` SET  titulo = '$titulo', precio = '$precio', inventario = $inventario WHERE `$tipo`.`id` = $id";
+   $actDatos = "UPDATE `$tipo` SET  titulo = '$titulo', precio = $precio, inventario = $inventario WHERE `$tipo`.`id` = $id";
    $resultadoAct= $conexion->query($actDatos);
 
    if ($resultadoAct) {

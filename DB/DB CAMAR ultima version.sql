@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 05-09-2022 a las 10:13:04
--- Versión del servidor: 8.0.17
--- Versión de PHP: 7.3.10
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 26-10-2022 a las 05:09:13
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -21,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `camar`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `user` varchar(50) NOT NULL,
+  `pass` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `admin`
+--
+
+INSERT INTO `admin` (`id`, `user`, `pass`) VALUES
+(1, 'juanjose', '71c0ad26de8ff9d74755fef6b673d0e5e730162d');
 
 -- --------------------------------------------------------
 
@@ -40,17 +58,17 @@ CREATE TABLE `bouquets` (
   `precio` int(11) NOT NULL,
   `precioPantalla` varchar(50) NOT NULL,
   `inventario` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `bouquets`
 --
 
 INSERT INTO `bouquets` (`id`, `titulo`, `descripcion`, `caracteristica1`, `caracteristica2`, `caracteristica3`, `caracteristica4`, `img`, `precio`, `precioPantalla`, `inventario`) VALUES
-(1, 'Bouquet Nº1', 'Ramo lleno de vividas flores para regalar a esa persona que es especial en nuestra vida.', 'Rosas Rojas', 'Orquidea', 'Ranunculos', 'Tarjeta', './imgs/bouquets/bouquet_001.jpeg', 70000, '70.000', 2),
+(1, 'Bouquet Nº1', 'Ramo lleno de vividas flores para regalar a esa persona que es especial en nuestra vida.', 'Rosas Rojas', 'Orquidea', 'Ranunculos', 'Tarjeta', './imgs/bouquets/bouquet_001.jpeg', 70000, '70.000', 3),
 (2, 'Bouquet Nº2', 'Ramo lleno de vividas flores para regalar a esa persona que es especial en nuestra vida.', 'Rosas Multicolor', 'Peonias', 'Hortencias', 'Alcatraces', './imgs/bouquets/bouquet_002.jpeg', 55000, '55.000', 3),
 (3, 'Bouquet Nº3', 'Ramo lleno de vividas flores para regalar a esa persona que es especial en nuestra vida.', 'Girasoles', 'Nubes', 'Cinta', 'Ranunculos', './imgs/bouquets/bouquet_003.jpeg', 60000, '60.000', 3),
-(4, 'Bouquet Nº4', 'Ramo lleno de vividas flores para regalar a esa persona que es especial en nuestra vida.', 'Tulipanes', 'Rosas', 'Dalias', 'Lilis', './imgs/bouquets/bouquet_004.jpeg', 90000, '90.000', 3);
+(4, 'Bouquet Nº4', 'Ramo lleno de vividas flores para regalar a esa persona que es especial en nuestra vida.', 'Tulipanes', 'Rosas', 'Dalias', 'Lilis', './imgs/bouquets/bouquet_004.jpeg', 90000, '90.000', 5);
 
 -- --------------------------------------------------------
 
@@ -64,7 +82,7 @@ CREATE TABLE `clientes` (
   `apellidos` text NOT NULL,
   `celular` bigint(10) NOT NULL,
   `correo` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -78,14 +96,7 @@ CREATE TABLE `contacto` (
   `correo` varchar(50) NOT NULL,
   `celular` bigint(20) NOT NULL,
   `mensaje` mediumtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Volcado de datos para la tabla `contacto`
---
-
-INSERT INTO `contacto` (`id`, `nombres`, `correo`, `celular`, `mensaje`) VALUES
-(1, 'andres', 'benjumea.andres.112@gmail.com', 3023344972, 'asdasdasdasdada');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -105,7 +116,7 @@ CREATE TABLE `exclusivos` (
   `precio` int(11) NOT NULL,
   `precioPantalla` varchar(50) NOT NULL,
   `inventario` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `exclusivos`
@@ -113,9 +124,9 @@ CREATE TABLE `exclusivos` (
 
 INSERT INTO `exclusivos` (`id`, `titulo`, `descripcion`, `caracteristica1`, `caracteristica2`, `caracteristica3`, `caracteristica4`, `img`, `precio`, `precioPantalla`, `inventario`) VALUES
 (1, 'Exclusivo Nº1', 'Ramos exclusivos y lujosos para esas ocasiones de gran importancia. Perfecto para un regalo de pareja o una propuesta amorosa.', 'Rosas', 'Claveles', 'Follaje', 'Tarjeta', './imgs/exclusivos/exclusivo_001.jpeg', 250000, '250.000', 4),
-(2, 'Exclusivo Nº2', 'Ramos exclusivos y lujosos para esas ocasiones de gran importancia. Perfecto para un regalo de pareja o una propuesta amorosa.', 'Alcatraces', 'Orquídeas', 'Peonías', 'Paniculata', './imgs/exclusivos/exclusivo_002.jpeg', 130000, '130.000', 4),
-(3, 'Exclusivo Nº3', 'Ramos exclusivos y lujosos para esas ocasiones de gran importancia. Perfecto para un regalo de pareja o una propuesta amorosa.', 'Orquídeas', 'Rosas', 'Claveles', 'Follaje', './imgs/exclusivos/exclusivo_003.jpeg', 165000, '165.000', 4),
-(4, 'Exclusivo Nº4', 'Ramos exclusivos y lujosos para esas ocasiones de gran importancia. Perfecto para un regalo de pareja o una propuesta amorosa.', 'Claveles', 'Peonías', 'Paniculata', 'Rosas', './imgs/exclusivos/exclusivo_004.jpeg', 280000, '280.000', 7);
+(2, 'Exclusivo Nº2', 'Ramos exclusivos y lujosos para esas ocasiones de gran importancia. Perfecto para un regalo de pareja o una propuesta amorosa.', 'Alcatraces', 'Orquideas', 'Peonias', 'Paniculata', './imgs/exclusivos/exclusivo_002.jpeg', 130000, '130.000', 4),
+(3, 'Exclusivo Nº3', 'Ramos exclusivos y lujosos para esas ocasiones de gran importancia. Perfecto para un regalo de pareja o una propuesta amorosa.', 'Orquideas', 'Rosas', 'Claveles', 'Follaje', './imgs/exclusivos/exclusivo_003.jpeg', 165000, '165.000', 4),
+(4, 'Exclusivo Nº4', 'Ramos exclusivos y lujosos para esas ocasiones de gran importancia. Perfecto para un regalo de pareja o una propuesta amorosa.', 'Claveles', 'Peonias', 'Paniculata', 'Rosas', './imgs/exclusivos/exclusivo_004.jpeg', 280000, '280.000', 10);
 
 -- --------------------------------------------------------
 
@@ -135,17 +146,17 @@ CREATE TABLE `funebres` (
   `precio` int(11) NOT NULL,
   `precioPantalla` varchar(50) NOT NULL,
   `inventario` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `funebres`
 --
 
 INSERT INTO `funebres` (`id`, `titulo`, `descripcion`, `caracteristica1`, `caracteristica2`, `caracteristica3`, `caracteristica4`, `img`, `precio`, `precioPantalla`, `inventario`) VALUES
-(1, 'Funebre Nº1', 'Preciosos y elegantes arreglos florales para dar sentidos pésame en esos momentos complicados de la vida.', 'Rosas', 'Amapolas', 'Solidago', 'Nube', './imgs/funebres/funebre_001.jpeg', 260000, '260.000', 6),
-(2, 'Funebre Nº2', 'Preciosos y elegantes arreglos florales para dar sentidos pésame en esos momentos complicados de la vida.', 'Lisianthus', 'Paniculata', 'Tulipanes', 'Nube', './imgs/funebres/funebre_002.jpeg', 200000, '200.000', 2),
-(3, 'Funebre Nº3', 'Preciosos y elegantes arreglos florales para dar sentidos pésame en esos momentos complicados de la vida.', 'Paniculata', 'Gerbera', 'Lisianthus', 'Lilis', './imgs/funebres/funebre_003.jpeg', 240000, '240.000', 2),
-(4, 'Funebre Nº4', 'Preciosos y elegantes arreglos florales para dar sentidos pésame en esos momentos complicados de la vida.', 'Lilis', 'Dalias', 'Paniculata', 'Gerbera', './imgs/funebres/funebre_004.jpeg', 180000, '180.000', 2);
+(1, 'Funebre Nº1', 'Preciosos y elegantes arreglos florales para dar sentidos pesame en esos momentos complicados de la vida.', 'Rosas', 'Amapolas', 'Solidago', 'Nube', './imgs/funebres/funebre_001.jpeg', 260000, '260.000', 10),
+(2, 'Funebre Nº2', 'Preciosos y elegantes arreglos florales para dar sentidos pesame en esos momentos complicados de la vida.', 'Lisianthus', 'Paniculata', 'Tulipanes', 'Nube', './imgs/funebres/funebre_002.jpeg', 200000, '200.000', 6),
+(3, 'Funebre Nº3', 'Preciosos y elegantes arreglos florales para dar sentidos pesame en esos momentos complicados de la vida.', 'Paniculata', 'Gerbera', 'Lisianthus', 'Lilis', './imgs/funebres/funebre_003.jpeg', 240000, '240.000', 2),
+(4, 'Funebre Nº4', 'Preciosos y elegantes arreglos florales para dar sentidos pesame en esos momentos complicados de la vida.', 'Lilis', 'Dalias', 'Paniculata', 'Gerbera', './imgs/funebres/funebre_004.jpeg', 180000, '180.000', 2);
 
 -- --------------------------------------------------------
 
@@ -166,7 +177,7 @@ CREATE TABLE `pedidos` (
   `idProducto` int(11) NOT NULL,
   `cantidadProductos` int(11) NOT NULL,
   `total` bigint(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -186,21 +197,27 @@ CREATE TABLE `tropicales` (
   `precio` int(11) NOT NULL,
   `precioPantalla` varchar(50) NOT NULL,
   `inventario` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tropicales`
 --
 
 INSERT INTO `tropicales` (`id`, `titulo`, `descripcion`, `caracteristica1`, `caracteristica2`, `caracteristica3`, `caracteristica4`, `img`, `precio`, `precioPantalla`, `inventario`) VALUES
-(1, 'Tropical Nº1', 'Vividas flores llenas de colores llamativos y fragancias atractivas. Ideales para regalar en fiestas y celebraciones.', 'Orquídeas', 'Claveles', 'Hortensias', 'Paniculata', './imgs/tropicales/tropical_001.jpeg', 150000, '150.000', 3),
-(2, 'Tropical Nº2', 'Vividas flores llenas de colores llamativos y fragancias atractivas. Ideales para regalar en fiestas y celebraciones.', 'Hortensias', 'Paniculata', 'Orquídeas', 'Begonias', './imgs/tropicales/tropical_002.jpeg', 140000, '140.000', 5),
+(1, 'Tropical Nº1', 'Vividas flores llenas de colores llamativos y fragancias atractivas. Ideales para regalar en fiestas y celebraciones.', 'Orqui­deas', 'Claveles', 'Hortensias', 'Paniculata', './imgs/tropicales/tropical_001.jpeg', 150000, '150.000', 5),
+(2, 'Tropical Nº2', 'Vividas flores llenas de colores llamativos y fragancias atractivas. Ideales para regalar en fiestas y celebraciones.', 'Hortensias', 'Paniculata', 'Orquideas', 'Begonias', './imgs/tropicales/tropical_002.jpeg', 150000, '140.000', 10),
 (3, 'Tropical Nº3', 'Vividas flores llenas de colores llamativos y fragancias atractivas. Ideales para regalar en fiestas y celebraciones.', 'Begonias', 'Paniculata', 'Claveles', 'Hortensias', './imgs/tropicales/tropical_003.jpeg', 180000, '180.000', 6),
-(4, 'Tropical Nº4', 'Vividas flores llenas de colores llamativos y fragancias atractivas. Ideales para regalar en fiestas y celebraciones.', 'Paniculata', 'Orquídeas', 'Hortensias', 'Claveles', './imgs/tropicales/tropical_004.jpeg', 200000, '200.000', 4);
+(4, 'Tropical Nº4', 'Vividas flores llenas de colores llamativos y fragancias atractivas. Ideales para regalar en fiestas y celebraciones.', 'Paniculata', 'Orquideas', 'Hortensias', 'Claveles', './imgs/tropicales/tropical_004.jpeg', 200000, '200.000', 4);
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `bouquets`
@@ -250,6 +267,12 @@ ALTER TABLE `tropicales`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `bouquets`
 --
 ALTER TABLE `bouquets`
@@ -265,7 +288,7 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT de la tabla `contacto`
 --
 ALTER TABLE `contacto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `exclusivos`
@@ -277,7 +300,7 @@ ALTER TABLE `exclusivos`
 -- AUTO_INCREMENT de la tabla `funebres`
 --
 ALTER TABLE `funebres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `pedidos`
@@ -289,7 +312,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de la tabla `tropicales`
 --
 ALTER TABLE `tropicales`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
